@@ -1,9 +1,18 @@
 public class Test {
-    static String convertirString(String s) {
-        return s.toLowerCase();
+    static String converterString(String[] s) {
+        return String.join("", s);
+    }
+    static Boolean isPhoneNumber(String str) {
+        return str
+                .chars()
+                .filter(Character::isDigit)
+                .count() >=2;
     }
     public static void main(String[] args) {
-        System.out.println("Hello world");
-        System.out.println(convertirString("kallo mohamed"));
+        String [] str = {"k", "a", "l", "l", "o"};
+        String string = "33556565656";
+        System.out.println(converterString(str));
+        System.out.println(isPhoneNumber(string));
+
     }
 }
